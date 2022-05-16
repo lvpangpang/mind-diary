@@ -1,0 +1,4 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="userinfo">吕肥肥的日记</view>
+</view>
