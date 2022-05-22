@@ -1,4 +1,8 @@
 <!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">吕肥肥的日记</view>
+  <image src="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" />
+  <!-- <button type="primary" bindtap="getUserProfile">获取头像昵称</button> -->
+  <view class="text">
+    霜降，秋尽冬来，也是我们村晚稻收获的最后几天。姊妹桥窝在仑山北坳，似乎太阳有点懒，出得迟，落山早，灌溉稻田的山溪水又比常温来得低些，晚稻的收割期自然要比山外再晚上十天半月。 依稀记得，那片稻田顺着山坳由东向西纵横错落，大一块小一块，一块又比...
+  </view>
 </view>
