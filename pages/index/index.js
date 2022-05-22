@@ -2,10 +2,12 @@ const app = getApp();
 
 Page({
   data: {
-    motto: "Hello World",
   },
 
-  onLoad() {
+  goWrite() {
+    wx.navigateTo({
+      url: "/pages/write/index"
+    })
   },
 
   // 获取用户信息
