@@ -1,11 +1,19 @@
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.user-info {
+  position: absolute;
+  top: 200rpx;
+  left: 50rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.user-head {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.nick-name {
+  margin-left: 30rpx;
+  font-size: 48rpx;
+}
+.text {
+  line-height: 1.8;
+  padding: 30rpx;
 }

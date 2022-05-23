@@ -1,6 +1,8 @@
+const { request } = require("../../utils/index");
 const app = getApp();
 const fileManager = wx.getFileSystemManager();
 let richText = null; //富文本编辑器实例
+
 Page({
   data: {
     statusBarHeight: 20,
@@ -20,32 +22,40 @@ Page({
   insertImageEvent() {
     wx.chooseImage({
       count: 1,
-      sizeType: ['original'],
+      sizeType: ["original"],
       success: (res) => {
         let path = res.tempFilePaths[0];
         // 暂时先转为base64插入数据库
-        let base64 = 'data:image/jpg;base64,' + fileManager.readFileSync(path, 'base64')
-        //调用子组件（富文本组件）方法，图片应先上传再插入，不然预览时无法查看图片。
-        richText
-          .insertImageMethod(base64)
-          .then((res) => {
-            console.log("[insert image success callback]=>", res);
-          })
-          .catch((res) => {
-            console.log("[insert image fail callback]=>", res);
-          });
+        let base64 =
+          "data:image/jpg;base64," + fileManager.readFileSync(path, "base64");
+        richText.insertImageMethod(base64);
       },
     });
   },
 
-  getEditorContent(data) {
-    wx.showToast({
-      title: '保存成功'
-    })
-    setTimeout(() => {
-      wx.navigateBack()
-    }, 300)
-    console.log(data)
+  async getEditorContent(data) {
+    const content = data.detail.value.html;
+    if (content !== "<p><br></p>") {
+      await request({
+        method: "POST",
+        url: "/diary/add",
+        data: {
+          content: data,
+        },
+      });
+      wx.showToast({
+        title: "保存成功",
+      });
+      setTimeout(() => {
+        wx.navigateBack();
+      }, 300);
+      console.log(data);
+    } else {
+      wx.showToast({
+        icon: "error",
+        title: "请输入内容",
+      });
+    }
   },
 
   onLoad() {
@@ -58,4 +68,3 @@ Page({
     });
   },
 });
-

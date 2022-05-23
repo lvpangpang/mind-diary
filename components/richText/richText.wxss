@@ -1,7 +1,5 @@
 @import "./assets/iconfont.wxss";
-page {
-  background: #f8f8f8;
-}
+
 .page-body{
   /* padding-bottom: 100rpx; */
 }
@@ -28,7 +26,7 @@ page {
 }
 
 .toolbar-2 {
-  padding: 5rpx 20px 5rpx 10px;
+  padding: 10rpx 20px 10rpx 10px;
   background: #f4f4f4;
   display: flex;
   align-items: center;
@@ -52,11 +50,11 @@ page {
 }
 .iconfont {
   display: inline-block;
-  padding: 8px 8px;
-  width: 24px;
-  height: 24px;
+  padding: 16rpx 16rpx 8rpx;
+  width: 48rpx;
+  height: 48rpx;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 40rpx;
 }
 
 .toolbar {
@@ -83,8 +81,8 @@ page {
 .save-icon {
   padding: 15rpx 30rpx;
   font-size: 20rpx;
-  background: #bf98d2;
-  color: #fff;
+  background: #f4ea2a;
+  color: #000;
 }
 .flex{
   display: flex;
