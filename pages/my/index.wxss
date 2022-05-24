@@ -11,7 +11,7 @@
 }
 .nick-name {
   margin-left: 30rpx;
-  font-size: 48rpx;
+  font-size: 40rpx;
 }
 .text {
   line-height: 1.8;

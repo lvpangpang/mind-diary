@@ -36,20 +36,24 @@ Page({
   async getEditorContent(data) {
     const content = data.detail.value.html;
     if (content !== "<p><br></p>") {
-      await request({
-        method: "POST",
-        url: "/diary/add",
-        data: {
-          content: data,
-        },
-      });
-      wx.showToast({
-        title: "保存成功",
-      });
-      setTimeout(() => {
-        wx.navigateBack();
-      }, 300);
-      console.log(data);
+      try {
+        wx.showLoading();
+        await request({
+          method: "POST",
+          url: "/diary/add",
+          data: {
+            content,
+          },
+        });
+        wx.showToast({
+          title: "保存成功",
+        });
+        setTimeout(() => {
+          wx.navigateBack();
+        }, 300);
+      } finally {
+        wx.hideLoading();
+      }
     } else {
       wx.showToast({
         icon: "error",

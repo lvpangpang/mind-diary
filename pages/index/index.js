@@ -2,7 +2,41 @@ const { request } = require("../../utils/index");
 const app = getApp();
 
 Page({
-  data: {},
+  data: {
+    list: [],
+  },
+
+  onShow() {
+    if (wx.getStorageSync("token")) {
+      this.getDiary();
+    }
+  },
+
+  async getDiary() {
+    try {
+      wx.showLoading({
+        title: "疯狂请求中",
+      });
+      const data = await request({
+        url: "/diary/get",
+        data: {
+          pageIndex: 1,
+        },
+      });
+      const { list } = data;
+      list.forEach((item) => {
+        item.content = item.content.replace(
+          /\<img/gi,
+          '<img style="max-width:100%;height:auto"'
+        );
+      });
+      this.setData({
+        list,
+      });
+    } finally {
+      wx.hideLoading();
+    }
+  },
 
   goWrite() {
     if (wx.getStorageSync("token")) {

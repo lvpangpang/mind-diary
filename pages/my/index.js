@@ -1,20 +1,20 @@
+const { request } = require("../../utils/index");
+
 const app = getApp();
 
 Page({
   data: {
-    motto: "Hello World",
+    user: {},
   },
 
-  onLoad() {
-  },
-
-  // 获取用户信息
-  getUserProfile(e) {
-    wx.getUserProfile({
-      desc: "用于完善会员资料",
-      success: (res) => {
-        console.log(res);
-      },
-    });
+  async onShow() {
+    if (wx.getStorageSync("token")) {
+      const data = await request({
+        url: "/user/getUser",
+      });
+      this.setData({
+        user: data,
+      });
+    }
   },
 });

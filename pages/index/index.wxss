@@ -22,3 +22,18 @@
   width: 120rpx;
   height: 120rpx;
 }
+
+.diary-total {
+  margin-bottom: 30rpx;
+}
+
+.diary-item {
+  margin-bottom: 40rpx;
+}
+.time {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.rich-text img {
+  max-width: 100%;
+}

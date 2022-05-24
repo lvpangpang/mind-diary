@@ -6,12 +6,13 @@ function request(props) {
   const { method, url, data } = props;
   const domain =
     envVersion === "develop"
-      ? "http://127.0.0.1:7001"
+      ? "http://10.16.20.9:7001"
       : "https://www.lvpangpang.com";
   return new Promise((resolve, reject) => {
     wx.request({
       method: method || "GET",
       url: domain + url,
+      timeout: 10000,
       header: {
         token: wx.getStorageSync("token"),
       },
@@ -37,7 +38,7 @@ function request(props) {
         reject(err);
         wx.showToast({
           icon: "error",
-          title: "服务端错误",
+          title: err.errMsg || '服务端错误',
         });
       },
     });

@@ -2,9 +2,15 @@
 <view class="index-container">
   <image class="com-header" src="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" />
   <view class="diary-box">
-    <view>已连续记录{{0}}天（共记录{{0}}篇）</view>
+    <view class="diary-total">已连续记录{{0}}天（共记录{{0}}篇）</view>
     <view class="diary-list">
-      <image class="no-data" src="../../images/no-data.png" />
+      <view wx:if="{{list.length>0}}">
+        <view wx:for="{{list}}" class="diary-item">
+          <view class="time">{{item.create_time}}</view>
+          <rich-text nodes="{{item.content}}"></rich-text>
+        </view>
+      </view>
+      <image wx:else class="no-data" src="../../images/no-data.png" />
       <image class="write-btn" src="../../images/write.png" bindtap="goWrite" />
     </view>
   </view>
