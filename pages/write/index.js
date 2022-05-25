@@ -3,6 +3,10 @@ const app = getApp();
 const fileManager = wx.getFileSystemManager();
 let richText = null; //富文本编辑器实例
 
+const {
+  miniProgram: { envVersion },
+} = wx.getAccountInfoSync();
+
 Page({
   data: {
     statusBarHeight: 20,
@@ -25,10 +29,21 @@ Page({
       sizeType: ["original"],
       success: (res) => {
         let path = res.tempFilePaths[0];
-        // 暂时先转为base64插入数据库
-        let base64 =
-          "data:image/jpg;base64," + fileManager.readFileSync(path, "base64");
-        richText.insertImageMethod(base64);
+        wx.uploadFile({
+          url:
+            (envVersion === "develop"
+              ? "http://10.16.20.9:7001"
+              : "https://www.lvpangpang.com") + "/upload",
+          filePath: path,
+          name: "files",
+          success(res) {
+            const result = JSON.parse(res.data);
+            const { data } = result;
+            console.log(typeof result);
+            console.log(result.data)
+            richText.insertImageMethod(data[0]['url']);
+          },
+        });
       },
     });
   },

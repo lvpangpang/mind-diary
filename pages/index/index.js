@@ -4,6 +4,7 @@ const app = getApp();
 Page({
   data: {
     list: [],
+    total: 0
   },
 
   onShow() {
@@ -23,7 +24,7 @@ Page({
           pageIndex: 1,
         },
       });
-      const { list } = data;
+      const { list, total } = data;
       list.forEach((item) => {
         item.content = item.content.replace(
           /\<img/gi,
@@ -32,6 +33,7 @@ Page({
       });
       this.setData({
         list,
+        total
       });
     } finally {
       wx.hideLoading();
@@ -49,6 +51,7 @@ Page({
   },
 
   login(props) {
+    const that = this
     wx.login({
       async success(res) {
         if (res.code) {
@@ -61,8 +64,7 @@ Page({
             },
           });
           wx.setStorageSync("token", token);
-        } else {
-          console.log("登录失败！" + res.errMsg);
+          that.onShow()
         }
       },
     });
