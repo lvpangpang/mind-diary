@@ -29,14 +29,25 @@ Page({
       sizeType: ["original"],
       success: (res) => {
         let path = res.tempFilePaths[0];
+        wx.showLoading();
         wx.uploadFile({
           url: getDomain() + "/upload",
           filePath: path,
           name: "files",
           success(res) {
+            wx.hideLoading();
             const result = JSON.parse(res.data);
-            const { data } = result;
-            richText.insertImageMethod(data[0]["url"]);
+            let { code, data } = result;
+            if (code === 200) {
+              let urlList = data;
+              richText.insertImageMethod(urlList[0]["url"]);
+            } else {
+              wx.showLoading();
+              wx.showToast({
+                icon: "error",
+                title: "上传图片失败",
+              });
+            }
           },
         });
       },
