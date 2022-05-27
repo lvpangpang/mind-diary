@@ -1,4 +1,4 @@
-const { request } = require("../../utils/index");
+const { request, getDomain } = require("../../utils/index");
 const app = getApp();
 const fileManager = wx.getFileSystemManager();
 let richText = null; //富文本编辑器实例
@@ -30,18 +30,13 @@ Page({
       success: (res) => {
         let path = res.tempFilePaths[0];
         wx.uploadFile({
-          url:
-            (envVersion === "develop"
-              ? "http://10.16.20.9:7001"
-              : "https://www.lvpangpang.com") + "/upload",
+          url: getDomain() + "/upload",
           filePath: path,
           name: "files",
           success(res) {
             const result = JSON.parse(res.data);
             const { data } = result;
-            console.log(typeof result);
-            console.log(result.data)
-            richText.insertImageMethod(data[0]['url']);
+            richText.insertImageMethod(data[0]["url"]);
           },
         });
       },

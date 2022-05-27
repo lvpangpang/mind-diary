@@ -2,12 +2,14 @@ const {
   miniProgram: { envVersion },
 } = wx.getAccountInfoSync();
 
+function getDomain() {
+  return envVersion === "develop"
+    ? "http://10.16.20.9:3000"
+    : "https://www.lvpangpang.com/api";
+}
 function request(props) {
   const { method, url, data } = props;
-  const domain =
-    envVersion === "develop"
-      ? "http://10.16.20.9:7001"
-      : "https://www.lvpangpang.com";
+  const domain = getDomain();
   return new Promise((resolve, reject) => {
     wx.request({
       method: method || "GET",
@@ -23,22 +25,20 @@ function request(props) {
           resolve(data);
           return;
         } else if (code === 401) {
-          wx.showToast({
-            icon: "error",
-            title: "未登录",
-          });
+          wx.removeStorageSync("token");
         }
         wx.showToast({
           icon: "error",
           title: msg,
         });
+
         reject(result.data);
       },
       fail: (err) => {
         reject(err);
         wx.showToast({
           icon: "error",
-          title: err.errMsg || '服务端错误',
+          title: err.errMsg || "服务端错误",
         });
       },
     });
@@ -46,4 +46,5 @@ function request(props) {
 }
 module.exports = {
   request,
+  getDomain,
 };
