@@ -26,7 +26,7 @@ Page({
   insertImageEvent() {
     wx.chooseImage({
       count: 1,
-      sizeType: ["original"],
+      sizeType: ["compressed"],
       success: (res) => {
         let path = res.tempFilePaths[0];
         wx.showLoading();
