@@ -1,0 +1,7 @@
+.com-write-btn {
+  position: fixed;
+  right: 40rpx;
+  bottom: 70rpx;
+  width: 120rpx;
+  height: 120rpx;
+}

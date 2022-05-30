@@ -1,0 +1,1 @@
+<image class="com-write-btn" src="../../images/write.png" bindtap="goWrite" />

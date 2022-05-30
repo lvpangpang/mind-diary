@@ -3,6 +3,7 @@ const app = getApp();
 const fileManager = wx.getFileSystemManager();
 let richText = null; //富文本编辑器实例
 
+let from = "index";
 const {
   miniProgram: { envVersion },
 } = wx.getAccountInfoSync();
@@ -29,7 +30,9 @@ Page({
       sizeType: ["compressed"],
       success: (res) => {
         let path = res.tempFilePaths[0];
-        wx.showLoading();
+        wx.showLoading({
+          title: "疯狂上传中",
+        });
         wx.uploadFile({
           url: getDomain() + "/upload",
           filePath: path,
@@ -61,7 +64,7 @@ Page({
         wx.showLoading();
         await request({
           method: "POST",
-          url: "/diary/add",
+          url: from === 'index' ? "/diary/add": '/community/add',
           data: {
             content,
           },
@@ -83,7 +86,8 @@ Page({
     }
   },
 
-  onLoad() {
+  onLoad(options) {
+    from = options.from
     wx.getSystemInfo({
       success: (res) => {
         this.setData({

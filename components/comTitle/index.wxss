@@ -1,0 +1,14 @@
+.com-title {
+
+}
+.com-header {
+  display: block;
+  width: 100%;
+  height: 450rpx;
+}
+.com-name {
+  position: absolute;
+  left: 80rpx;
+  top: 200rpx;
+  font-size: 50rpx;
+}

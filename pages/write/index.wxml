@@ -3,7 +3,7 @@
   <view class="com-back" bindtap="goBack" style="top: {{statusBarHeight + 12 + 'px'}}">
     <image src="../../images/back.png" />
   </view>
-  <image class="com-header" src="https://zh-cn.learn.canva.com/wp-content/uploads/sites/17/2019/06/%E9%BA%A6%E7%94%B0%E5%B0%81%E9%9D%A2.png" />
+  <comTitle bgUrl="https://zh-cn.learn.canva.com/wp-content/uploads/sites/17/2019/06/%E9%BA%A6%E7%94%B0%E5%B0%81%E9%9D%A2.png"></comTitle>
   <richText 
     id='richText' 
     readOnly='{{readOnly}}'

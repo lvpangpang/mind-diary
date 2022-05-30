@@ -1,0 +1,4 @@
+<view class="com-title">
+  <image class="com-header" src="{{bgUrl}}" />
+  <view class="com-name">{{name}}</view>
+</view>

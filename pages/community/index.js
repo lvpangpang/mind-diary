@@ -4,23 +4,20 @@ const app = getApp();
 Page({
   data: {
     list: [],
-    total: 0,
-    num: 0
+    total: 0
   },
 
   onShow() {
-    if (wx.getStorageSync("token")) {
-      this.getDiary();
-    }
+    this.getData();
   },
 
-  async getDiary() {
+  async getData() {
     try {
       wx.showLoading({
         title: "疯狂请求中",
       });
       const data = await request({
-        url: "/diary/get",
+        url: "/community/get",
         data: {
           pageIndex: 1,
         },
@@ -34,11 +31,10 @@ Page({
       });
       this.setData({
         list,
-        total,
-        num
+        total
       });
     } finally {
       wx.hideLoading();
     }
-  }
+  },
 });

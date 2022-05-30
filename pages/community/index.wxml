@@ -1,0 +1,19 @@
+<view class="community-container">
+  <comTitle bgUrl="https://uploadfile.huiyi8.com/22/61/48/57/2443f090dc79ac4dc132d7b9e0835619.jpg" name="社区"></comTitle>
+  <view class="community-list">
+    <view wx:if="{{list.length>0}}">
+      <view wx:for="{{list}}" class="community-item" wx:key="id">
+        <view class="tips-box">
+          <image src="{{item.avatar_url}}" class="avatar" />
+          <view>
+            <view>{{item.username}}</view>
+            <view class="time">{{item.create_time}}</view>
+          </view>
+        </view>
+        <rich-text nodes="{{item.content}}"></rich-text>
+      </view>
+    </view>
+    <comNoNum wx:else></comNoNum>
+  </view>
+  <comWriteBtn url="/pages/write/index?from=community"></comWriteBtn>
+</view>

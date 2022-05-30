@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "richText": "../../components/richText/richText"
+    "richText": "../../components/richText/richText",
+    "comTitle": "../../components/comTitle/index"
   }
 }

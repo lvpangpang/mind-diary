@@ -1,7 +1,6 @@
 <!-- index.wxml -->
 <view class="index-container">
-  <image class="com-header" src="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" />
-  <view class="com-title">吕肥肥的日记</view>
+  <comTitle bgUrl="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" name="吕肥肥的日记"></comTitle>
   <view class="diary-box">
     <view class="diary-total" wx:if="{{list.length>0}}">已连续记录{{num}}天（共记录{{total}}篇）</view>
     <view class="diary-list">
@@ -11,11 +10,8 @@
           <rich-text nodes="{{item.content}}"></rich-text>
         </view>
       </view>
-      <view wx:else class="no-data">
-        <image src="../../images/no-data.png" />
-        <view>没有数据</view>
-      </view>
-      <image class="write-btn" src="../../images/write.png" bindtap="goWrite" />
+      <comNoNum wx:else></comNoNum>
     </view>
   </view>
+  <comWriteBtn url="/pages/write/index?from=index"></comWriteBtn>
 </view>

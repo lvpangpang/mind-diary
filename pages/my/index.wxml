@@ -1,6 +1,6 @@
 <!-- index.wxml -->
 <view class="container">
-  <image class="com-header" src="https://photoos.macsc.com/180426/180426_108/p3bj7XfFde_small.jpg" />
+  <comTitle bgUrl="https://photoos.macsc.com/180426/180426_108/p3bj7XfFde_small.jpg"></comTitle>
   <view class="user-info">
     <image src="{{user['avatar_url']}}" class="user-head" />
     <text class="nick-name">{{user['username']}}</text>

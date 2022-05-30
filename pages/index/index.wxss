@@ -3,26 +3,11 @@
   top: -40rpx;
   width: 100%;
   min-height: 600rpx;
-  padding: 20rpx;
+  padding: 40rpx;
   border-top-left-radius: 40rpx;
   border-top-right-radius: 40rpx;
   background: #fff;
   box-sizing: border-box;
-}
-.no-data {
-  width: 150rpx;
-  margin:  300rpx auto;
-}
-.no-data image {
-  width: 150rpx;
-  height: 150rpx;
-}
-.write-btn {
-  position: fixed;
-  right: 40rpx;
-  bottom: 70rpx;
-  width: 120rpx;
-  height: 120rpx;
 }
 
 .diary-total {
@@ -35,7 +20,4 @@
 .time {
   font-size: 30rpx;
   margin-bottom: 20rpx;
-}
-.rich-text img {
-  max-width: 100%;
 }

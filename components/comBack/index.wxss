@@ -1,0 +1,8 @@
+.com-no-data {
+  width: 150rpx;
+  margin:  300rpx auto;
+}
+.com-no-data image {
+  width: 150rpx;
+  height: 150rpx;
+}
