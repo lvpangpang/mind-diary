@@ -1,8 +1,9 @@
 <!-- index.wxml -->
 <view class="index-container">
   <image class="com-header" src="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" />
+  <view class="com-title">吕肥肥的日记</view>
   <view class="diary-box">
-    <view class="diary-total" wx:if="{{list.length>0}}">已连续记录{{0}}天（共记录{{total}}篇）</view>
+    <view class="diary-total" wx:if="{{list.length>0}}">已连续记录{{num}}天（共记录{{total}}篇）</view>
     <view class="diary-list">
       <view wx:if="{{list.length>0}}">
         <view wx:for="{{list}}" class="diary-item" wx:key="id">

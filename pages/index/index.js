@@ -4,7 +4,8 @@ const app = getApp();
 Page({
   data: {
     list: [],
-    total: 0
+    total: 0,
+    num: 0
   },
 
   onShow() {
@@ -24,7 +25,7 @@ Page({
           pageIndex: 1,
         },
       });
-      const { list, total } = data;
+      const { list, total, num } = data;
       list.forEach((item) => {
         item.content = item.content.replace(
           /\<img/gi,
@@ -33,7 +34,8 @@ Page({
       });
       this.setData({
         list,
-        total
+        total,
+        num
       });
     } finally {
       wx.hideLoading();

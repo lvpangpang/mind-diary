@@ -4,7 +4,7 @@ const {
 
 function getDomain() {
   return envVersion === "develop"
-    ? "https://www.lvpangpang.com/api"
+    ? "http://10.16.20.9:3000"
     : "https://www.lvpangpang.com/api";
 }
 function request(props) {
