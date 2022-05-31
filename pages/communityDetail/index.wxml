@@ -1,0 +1,17 @@
+<view class="community-detail-container">
+  <comBack></comBack>
+  <view class="detail-content">
+    <comAvatar name="{{detail.username}}" time="{{detail.create_time}}" avatar="{{detail.avatar_url}}"></comAvatar>
+    <rich-text nodes="{{detail.content}}"></rich-text>
+  </view>
+  <view class="line"></view>
+  <view class="detail-comment">
+    <view>全部评论</view>
+    <view></view>
+  </view>
+  <!-- <view class="add-comment">评论一下<image src="../../images/comment.png" /></view> -->
+  <view class="add-comment">
+    <textarea model:value="{{content}}" foucs="auto" placeholder="请输入评论" />
+    <button bindtap="add">确定</button>
+  </view>
+</view>

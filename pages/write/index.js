@@ -1,21 +1,8 @@
 const { request, getDomain } = require("../../utils/index");
-const app = getApp();
-const fileManager = wx.getFileSystemManager();
 let richText = null; //富文本编辑器实例
-
 let from = "index";
-const {
-  miniProgram: { envVersion },
-} = wx.getAccountInfoSync();
 
 Page({
-  data: {
-    statusBarHeight: 20,
-  },
-
-  goBack() {
-    wx.navigateBack();
-  },
 
   //编辑器初始化完成时触发，可以获取组件实例
   onEditorReady() {
@@ -88,12 +75,5 @@ Page({
 
   onLoad(options) {
     from = options.from
-    wx.getSystemInfo({
-      success: (res) => {
-        this.setData({
-          statusBarHeight: res.statusBarHeight,
-        });
-      },
-    });
   },
 });

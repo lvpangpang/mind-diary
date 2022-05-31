@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/community/index",
+    "pages/communityDetail/index",
     "pages/my/index",
     "pages/write/index"
   ],

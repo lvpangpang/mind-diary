@@ -1,0 +1,7 @@
+<view class="avatar-box">
+  <image src="{{avatar}}" class="avatar" />
+  <view>
+    <view>{{name}}</view>
+    <view class="time">{{time}}</view>
+  </view>
+</view>

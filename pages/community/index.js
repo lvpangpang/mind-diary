@@ -22,7 +22,7 @@ Page({
           pageIndex: 1,
         },
       });
-      const { list, total, num } = data;
+      const { list, total } = data;
       list.forEach((item) => {
         item.content = item.content.replace(
           /\<img/gi,
@@ -37,4 +37,10 @@ Page({
       wx.hideLoading();
     }
   },
+
+  goDetail(option) {
+    wx.navigateTo({
+      url: `/pages/communityDetail/index?id=${option.currentTarget.dataset.id}`
+    })
+  }
 });

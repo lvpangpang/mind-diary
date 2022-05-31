@@ -1,0 +1,11 @@
+.avatar-box {
+  margin-bottom: 20rpx;
+  display: flex;
+  font-size: 30rpx;
+}
+.avatar-box .avatar {
+  margin-right: 20rpx;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}

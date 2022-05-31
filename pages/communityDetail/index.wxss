@@ -1,0 +1,26 @@
+.community-detail-container {
+  padding-top: 200rpx;
+}
+.line {
+  background: #ddd;
+  height: 10rpx;
+}
+.detail-content {
+  padding: 20rpx;
+}
+.detail-comment {
+  padding: 20rpx;
+}
+.add-comment {
+  /* position: fixed;
+  bottom: 100rpx;
+  width: 100%; */
+  /* text-align: center; */
+
+}
+.add-comment image {
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}

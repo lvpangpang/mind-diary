@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "comBack": "../../components/comBack/index",
+    "comAvatar": "../../components/comAvatar/index"
+  }
+}

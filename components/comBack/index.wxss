@@ -1,8 +1,10 @@
-.com-no-data {
-  width: 150rpx;
-  margin:  300rpx auto;
+.com-back {
+  position: fixed;
+  left: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
-.com-no-data image {
-  width: 150rpx;
-  height: 150rpx;
+.com-back image {
+  width: 100%;
+  height: 100%;
 }

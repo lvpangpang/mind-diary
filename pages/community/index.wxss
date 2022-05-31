@@ -3,18 +3,7 @@
 }
 .community-item {
   margin-bottom: 40rpx;
-  background: #d2d2d2;
-  border-radius: 20rpx;
+  background: #fcf4f4;
+  border-radius: 10rpx;
   padding: 40rpx;
-}
-.tips-box {
-  margin-bottom: 20rpx;
-  display: flex;
-  font-size: 30rpx;
-}
-.avatar {
-  margin-right: 20rpx;
-  width: 90rpx;
-  height: 90rpx;
-  border-radius: 50%;
 }

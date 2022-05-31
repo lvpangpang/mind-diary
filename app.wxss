@@ -5,13 +5,3 @@ page {
 img {
   max-width: 100%;
 }
-.com-back {
-  position: fixed;
-  left: 30rpx;
-  width: 50rpx;
-  height: 50rpx;
-}
-.com-back image {
-  width: 100%;
-  height: 100%;
-}

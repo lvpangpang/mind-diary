@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "comBack": "../../components/comBack/index",
     "richText": "../../components/richText/richText",
     "comTitle": "../../components/comTitle/index"
   }

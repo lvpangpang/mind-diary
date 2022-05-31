@@ -1,4 +1,3 @@
-<view class="com-no-data">
-  <image src="../../images/no-data.png" />
-  <view>没有数据</view>
+<view class="com-back" bindtap="goBack" style="top: {{statusBarHeight + 10 + 'px'}}">
+  <image src="../../images/back.png" />
 </view>
