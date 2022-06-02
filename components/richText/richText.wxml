@@ -1,5 +1,4 @@
 <view class="whole" id="richText">
-  <!-- <view style="height:{{textTool?'200':'100'}}rpx;"></view> -->
   <view class="editor-toolbar" bindtap="format">
     <view class="toolbar-2">
       <view class="tool-item-cell">

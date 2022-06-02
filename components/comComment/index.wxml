@@ -1,0 +1,6 @@
+<view bindtap="close" class="back-page">
+	<view class="release">
+		<textarea autoFocus="true" autoHeight="true" value="{{value}}" bindinput="setValue" class="text" cursorSpacing="20" fixed="true" focus="true" placeholder="{{placeholder? '@'+placeholder: '请填写'}}" placeholderClass="input_null"></textarea>
+		<view class="submit" bindtap="save">发送</view>
+	</view>
+</view>

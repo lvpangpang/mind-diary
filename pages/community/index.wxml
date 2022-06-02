@@ -9,5 +9,5 @@
     </view>
     <comNoNum wx:else></comNoNum>
   </view>
-  <comWriteBtn url="/pages/write/index?from=community"></comWriteBtn>
+  <comWriteBtn url="/pages/write/index?from=community" bind:callback="onShow"></comWriteBtn>
 </view>

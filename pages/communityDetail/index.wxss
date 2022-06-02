@@ -9,13 +9,25 @@
   padding: 20rpx;
 }
 .detail-comment {
-  padding: 20rpx;
+  padding: 40rpx 20rpx 20rpx;
+}
+.comment-item {
+  margin-bottom: 15rpx;
+}
+.comment-item .text {
+  word-break: break-all;
+}
+.user-name {
+  color: aqua;
+}
+.all-comment {
+  margin-bottom: 40rpx;
 }
 .add-comment {
-  /* position: fixed;
+  position: fixed;
   bottom: 100rpx;
-  width: 100%; */
-  /* text-align: center; */
+  width: 100%;
+  text-align: center;
 
 }
 .add-comment image {

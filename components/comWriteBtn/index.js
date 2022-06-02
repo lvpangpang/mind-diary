@@ -8,6 +8,10 @@ Component({
       type: String,
       value: "",
     },
+    callback: {
+      type: Function,
+      value: () => {}
+    },
   },
   methods: {
     goWrite() {
@@ -47,7 +51,7 @@ Component({
               },
             });
             wx.setStorageSync("token", token);
-            that.onShow();
+            that.triggerEvent("callback");
           }
         },
       });

@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "comBack": "../../components/comBack/index",
-    "comAvatar": "../../components/comAvatar/index"
+    "comAvatar": "../../components/comAvatar/index",
+    "comComment": "../../components/comComment/index"
   }
 }

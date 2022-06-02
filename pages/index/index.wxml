@@ -13,5 +13,5 @@
       <comNoNum wx:else></comNoNum>
     </view>
   </view>
-  <comWriteBtn url="/pages/write/index?from=index"></comWriteBtn>
+  <comWriteBtn url="/pages/write/index?from=index" bind:callback="onShow"></comWriteBtn>
 </view>

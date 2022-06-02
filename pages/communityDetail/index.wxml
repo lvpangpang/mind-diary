@@ -6,12 +6,22 @@
   </view>
   <view class="line"></view>
   <view class="detail-comment">
-    <view>全部评论</view>
-    <view></view>
+    <view class="all-comment">全部评论</view>
+    <view>
+      <view wx:if="{{comment.length>0}}">
+        <view wx:for="{{comment}}" class="comment-item" wx:key="id" data-id="{{item.user_id}}" data-name="{{item.username}}" bindtap="show">
+          <text class="user-name">{{item.username}}</text>
+          <text class="user-name" wx:if="{{!!item.reply_name}}">{{' 回复 ' + item.reply_name}}</text>
+          <text>:</text>
+          <text class="text">{{item.content}}</text>
+        </view>
+      </view>
+      <comNoNum wx:else></comNoNum>
+    </view>
   </view>
-  <!-- <view class="add-comment">评论一下<image src="../../images/comment.png" /></view> -->
-  <view class="add-comment">
-    <textarea model:value="{{content}}" foucs="auto" placeholder="请输入评论" />
-    <button bindtap="add">确定</button>
+  <view class="add-comment" bindtap="show">
+    评论一下
+    <image src="../../images/comment.png" />
   </view>
+  <comComment wx:if="{{showComment}}" placeholder="{{selectUser.name}}" bind:close="close" bind:save="save"></comComment>
 </view>
