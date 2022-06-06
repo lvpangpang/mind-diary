@@ -1,9 +1,0 @@
-.community-list {
-  padding: 40rpx;
-}
-.community-item {
-  margin-bottom: 40rpx;
-  background: #fcf4f4;
-  border-radius: 10rpx;
-  padding: 40rpx;
-}

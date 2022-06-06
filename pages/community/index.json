@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "comWriteBtn": "../../components/comWriteBtn/index",
-    "comNoNum": "../../components/comNoNum/index",
-    "comTitle": "../../components/comTitle/index",
-    "comAvatar": "../../components/comAvatar/index"
-  }
-}

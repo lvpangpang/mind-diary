@@ -1,17 +1,13 @@
-<!-- index.wxml -->
-<view class="index-container">
-  <comTitle bgUrl="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" name="吕肥肥的日记"></comTitle>
-  <view class="diary-box">
-    <view class="diary-total" wx:if="{{list.length>0}}">已连续记录{{num}}天（共记录{{total}}篇）</view>
-    <view class="diary-list">
-      <view wx:if="{{list.length>0}}">
-        <view wx:for="{{list}}" class="diary-item" wx:key="id">
-          <view class="time">{{item.create_time}}</view>
-          <rich-text nodes="{{item.content}}"></rich-text>
-        </view>
+<view class="community-container">
+  <comTitle bgUrl="https://uploadfile.huiyi8.com/22/61/48/57/2443f090dc79ac4dc132d7b9e0835619.jpg" name="社区"></comTitle>
+  <view class="community-list">
+    <view wx:if="{{list.length>0}}">
+      <view wx:for="{{list}}" class="community-item" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+        <comAvatar name="{{item.username}}" time="{{item.create_time}}" avatar="{{item.avatar_url}}"></comAvatar>
+        <rich-text nodes="{{item.content}}"></rich-text>
       </view>
-      <comNoNum wx:else></comNoNum>
     </view>
+    <comNoNum wx:else></comNoNum>
   </view>
-  <comWriteBtn url="/pages/write/index?from=index" bind:callback="onShow"></comWriteBtn>
+  <comWriteBtn url="/pages/write/index?from=community" bind:callback="onShow"></comWriteBtn>
 </view>

@@ -1,23 +1,9 @@
-.diary-box {
-  position: relative;
-  top: -40rpx;
-  width: 100%;
-  min-height: 600rpx;
+.community-list {
   padding: 40rpx;
-  border-top-left-radius: 40rpx;
-  border-top-right-radius: 40rpx;
-  background: #fff;
-  box-sizing: border-box;
 }
-
-.diary-total {
-  margin-bottom: 30rpx;
-}
-
-.diary-item {
+.community-item {
   margin-bottom: 40rpx;
-}
-.time {
-  font-size: 30rpx;
-  margin-bottom: 20rpx;
+  background: #fcf4f4;
+  border-radius: 10rpx;
+  padding: 40rpx;
 }

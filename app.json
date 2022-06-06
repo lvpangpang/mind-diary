@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/community/index",
     "pages/communityDetail/index",
     "pages/my/index",
     "pages/write/index"
@@ -21,12 +20,6 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/home1.png",
-        "selectedIconPath": "images/home2.png"
-      },
-      {
-        "pagePath": "pages/community/index",
         "text": "社区",
         "iconPath": "images/community1.png",
         "selectedIconPath": "images/community2.png"
