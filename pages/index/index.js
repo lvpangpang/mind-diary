@@ -39,8 +39,8 @@ Page({
   },
 
   goDetail(option) {
-    wx.navigateTo({
-      url: `/pages/communityDetail/index?id=${option.currentTarget.dataset.id}`
-    })
+    // wx.navigateTo({
+    //   url: `/pages/communityDetail/index?id=${option.currentTarget.dataset.id}`
+    // })
   }
 });

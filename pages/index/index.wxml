@@ -1,5 +1,5 @@
 <view class="community-container">
-  <comTitle bgUrl="https://uploadfile.huiyi8.com/22/61/48/57/2443f090dc79ac4dc132d7b9e0835619.jpg" name="社区"></comTitle>
+  <comTitle bgUrl="https://photo69.macsc.com/180413/180413_156/8muKzzqEH0_small.jpg" name="社区"></comTitle>
   <view class="community-list">
     <view wx:if="{{list.length>0}}">
       <view wx:for="{{list}}" class="community-item" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
