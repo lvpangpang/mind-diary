@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
   <comBack></comBack>
-  <comTitle bgUrl="https://zh-cn.learn.canva.com/wp-content/uploads/sites/17/2019/06/%E9%BA%A6%E7%94%B0%E5%B0%81%E9%9D%A2.png"></comTitle>
+  <comTitle bgUrl="https://lvpangpang.com/btc1.jpg"></comTitle>
   <richText 
     id='richText' 
     readOnly='{{readOnly}}'

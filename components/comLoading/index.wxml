@@ -1,0 +1,4 @@
+<view class="com-loading">
+  <image wx:if="{{!isBottom}}" class="loading-img" src="../../images/loading.png" />
+  <view wx:else class="bottom">已经到底了</view>
+</view>

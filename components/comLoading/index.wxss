@@ -1,0 +1,21 @@
+.com-loading {
+  height: 100rpx;
+  text-align: center;
+}
+.com-loading .loading-img {
+  width: 64rpx;
+  height: 64rpx;
+  animation: loading 2.5s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.com-loading .bottom {
+  font-size: 30rpx;
+  color: #dedede;
+}

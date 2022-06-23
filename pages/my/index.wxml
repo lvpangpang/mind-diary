@@ -1,11 +1,11 @@
 <!-- index.wxml -->
 <view class="container">
-  <comTitle bgUrl="https://photoos.macsc.com/180426/180426_108/p3bj7XfFde_small.jpg"></comTitle>
+  <comTitle bgUrl="https://lvpangpang.com/btc1.jpg"></comTitle>
   <view class="user-info">
     <image src="{{user['avatar_url']}}" class="user-head" />
     <text class="nick-name">{{user['username']}}</text>
   </view>
   <view class="text">
-    有人说，少年如溪，青年如河，中年如湖，老年如海。坎坷人生路，风雨几十载，历尽世事沧桑，阅尽人间百态，心量越活越大，心胸愈活愈阔，心境越活越淡，最后海纳百川，有容乃大。这当是人生的最高境界，也是生命的最后圆满。...
+    比特币是一种基于去中心化，采用点对点网络与共识主动性，开放源代码，以区块链作为底层技术的加密货币[6]，比特币由中本聪于2008年10月31日发表论文，2009年1月3日，创世区块诞生。
   </view>
 </view>
