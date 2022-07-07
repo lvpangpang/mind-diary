@@ -31,7 +31,6 @@ function request(props) {
           icon: "error",
           title: msg,
         });
-
         reject(result.data);
       },
       fail: (err) => {
