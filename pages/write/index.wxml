@@ -2,21 +2,18 @@
 <view class="container">
   <comBack></comBack>
   <comTitle bgUrl="https://lvpangpang.com/btc1.jpg"></comTitle>
-  <richText 
-    id='richText' 
-    readOnly='{{readOnly}}'
-    placeholder='{{placeholder}}' 
-    formatDate='YY/MM/DD'
-    buttonTxt='保存'
-    bind:clearBeforeEvent='clearBeforeEvent'
-    bind:clearSuccess='clearSuccess'
-    bind:undo='undo'
-    bind:restore='restore'
-    bind:onEditorReady='onEditorReady' 
-    bind:bindfocus='bindfocus' 
-    bind:bindblur='bindblur' 
-    bind:bindinput='bindinput' 
-    bind:insertImageEvent='insertImageEvent' 
-    bind:getEditorContent='getEditorContent'>
-  </richText>
+  <view class="choose-box">
+    <radio-group bindchange="radioChange">
+      是否置顶：
+      <label>
+        <radio value="{{0}}" checked="true" />
+        否
+      </label>
+      <label>
+        <radio value="{{1}}" />
+        是
+      </label>
+    </radio-group>
+  </view>
+  <richText id='richText' readOnly='{{readOnly}}' placeholder='{{placeholder}}' formatDate='YY/MM/DD' buttonTxt='保存' bind:clearBeforeEvent='clearBeforeEvent' bind:clearSuccess='clearSuccess' bind:undo='undo' bind:restore='restore' bind:onEditorReady='onEditorReady' bind:bindfocus='bindfocus' bind:bindblur='bindblur' bind:bindinput='bindinput' bind:insertImageEvent='insertImageEvent' bind:getEditorContent='getEditorContent'></richText>
 </view>

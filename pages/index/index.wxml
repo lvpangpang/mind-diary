@@ -1,14 +1,19 @@
 <view class="community-container">
   <comTitle bgUrl="https://lvpangpang.com/btc1.jpg" name="比特币投资日记"></comTitle>
-  <view class="community-list">
-    <view wx:if="{{list.length>0}}">
-      <view wx:for="{{list}}" class="community-item" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
-        <comAvatar name="{{item.username}}" time="{{item.create_time}}" avatar="{{item.avatar_url}}"></comAvatar>
-        <rich-text nodes="{{item.content}}"></rich-text>
-      </view>
+  <view class="community-list" wx:if="{{top.length>0}}">
+    <view wx:for="{{top}}" class="community-item" wx:key="id" data-id="{{item.id}}">
+      <comAvatar name="{{item.username}}" time="{{item.create_time}}" avatar="{{item.avatar_url}}"></comAvatar>
+      <rich-text nodes="{{item.content}}"></rich-text>
+      <image src="../../images/top.png" class="top" />
     </view>
-    <comNoNum wx:else></comNoNum>
   </view>
+  <view class="community-list" wx:if="{{list.length>0}}">
+    <view wx:for="{{list}}" class="community-item" wx:key="id" data-id="{{item.id}}">
+      <comAvatar name="{{item.username}}" time="{{item.create_time}}" avatar="{{item.avatar_url}}"></comAvatar>
+      <rich-text nodes="{{item.content}}"></rich-text>
+    </view>
+  </view>
+  <comNoNum wx:if="{{top.length<=0&&list.length<=0}}"></comNoNum>
   <comWriteBtn url="/pages/write/index?from=community" bind:callback="onShow"></comWriteBtn>
   <comLoading wx:if="{{!isBottom}}" isBottom="{{isBottom}}"></comLoading>
 </view>

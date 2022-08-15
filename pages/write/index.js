@@ -3,7 +3,9 @@ let richText = null; //富文本编辑器实例
 let from = "index";
 
 Page({
-
+  data: {
+    isTop: 0,
+  },
   //编辑器初始化完成时触发，可以获取组件实例
   onEditorReady() {
     console.log("[onEditorReady callback]");
@@ -51,9 +53,10 @@ Page({
         wx.showLoading();
         await request({
           method: "POST",
-          url: from === 'index' ? "/diary/add": '/community/add',
+          url: from === "index" ? "/diary/add" : "/community/add",
           data: {
             content,
+            top: this.data.isTop
           },
         });
         wx.showToast({
@@ -73,7 +76,11 @@ Page({
     }
   },
 
+  radioChange(e) {
+    this.data.isTop = e.detail.value;
+  },
+
   onLoad(options) {
-    from = options.from
+    from = options.from;
   },
 });

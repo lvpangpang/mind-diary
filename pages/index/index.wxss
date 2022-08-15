@@ -2,8 +2,17 @@
   padding: 40rpx;
 }
 .community-item {
+  position: relative;
   margin-bottom: 40rpx;
   background: #fcf4f4;
   border-radius: 10rpx;
   padding: 40rpx;
+  overflow: hidden;
+}
+.top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64rpx;
+  height: 64rpx;
 }

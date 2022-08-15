@@ -5,6 +5,7 @@ const pageSize = 10;
 
 Page({
   data: {
+    top: [],
     list: [],
     total: 0,
     pageIndex: 1,
@@ -22,6 +23,7 @@ Page({
       title: "疯狂请求中",
     });
     this.getData();
+    this.getTop();
   },
 
   onReachBottom() {
@@ -72,9 +74,19 @@ Page({
     }
   },
 
-  goDetail(option) {
-    // wx.navigateTo({
-    //   url: `/pages/communityDetail/index?id=${option.currentTarget.dataset.id}`
-    // })
+  async getTop() {
+    const data = await request({
+      url: "/community/getTop",
+    });
+    const { list } = data;
+    list.forEach((item) => {
+      item.content = item.content.replace(
+        /\<img/gi,
+        '<img style="max-width:100%;height:auto"'
+      );
+    });
+    this.setData({
+      top: list
+    });
   },
 });
